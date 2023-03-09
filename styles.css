@@ -1,0 +1,182 @@
+:root {
+  /*Primary*/
+
+  --dark-cyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+
+  /*Neutral*/
+
+  --very-dark-blue: hsl(212, 21%, 14%);
+  --dark-grayish-blue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+}
+
+body {
+  background-color: var(--cream);
+}
+
+.perfume {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.perfume__container {
+  width: 21.4375rem;
+  height: 38.1875rem;
+  margin: 2rem auto;
+  background-color: var(--white);
+  border-radius: 0.625rem;
+
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.perfume__image {
+  width: 21.4375rem;
+  height: 15rem;
+  background-image: url(./images/image-product-mobile.jpg);
+  background-size: cover;
+  border-radius: 0.625rem 0.625rem 0 0;
+  order: -2;
+}
+
+.perfume__title {
+  font-family: Fraunces;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 2rem;
+  color: var(--very-dark-blue);
+  margin: -1rem 1.5rem 0 1.5rem;
+  order: 0;
+}
+
+.perfume__subtitle {
+  font-family: Montserrat;
+  font-weight: 500;
+  font-size: 0.75rem;
+  line-height: 0.9375rem;
+  letter-spacing: 0.3125rem;
+  color: var(--dark-grayish-blue);
+  margin: 0rem 1.5rem 0 1.5rem;
+  order: -1;
+}
+
+.perfume__description {
+  font-family: Montserrat;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.4375rem;
+  color: var(--dark-grayish-blue);
+  margin: -.5rem 1.5rem 0 1.5rem;
+}
+
+.perfume__prices {
+  width: 12.125rem;
+  height: 2rem;
+  margin: 0rem 1.5rem 0 1.5rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.perfume__price--discount {
+  font-family: Fraunces;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 2rem;
+  color: var(--dark-cyan);
+}
+
+.perfume__price--wdiscount {
+  font-family: Montserrat;
+  font-weight: 500;
+  font-size: 0.8125rem;
+  line-height: 1.4375rem;
+  text-decoration-line: line-through;
+  color: var(--dark-grayish-blue);
+}
+
+
+.perfume__button {
+  width: 18.4375rem;
+  height: 3rem;
+  margin: 0rem 1.5rem 0 1.5rem;
+  border-style: none;
+  border-radius: 0.5rem;
+  background-color: var(--dark-cyan);
+  color: var(--white);
+  font-family: Montserrat;
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1.0625rem;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.perfume__button:hover {
+  background-color: hsl(158, 42%, 18%);
+}
+
+.attribution {
+  font-family: Montserrat;
+  text-align: center;
+  color: var(--very-dark-blue);
+}
+
+.attribution a {
+  text-decoration: none;
+}
+
+
+@media screen and (min-width: 900px) {
+  .perfume__container {
+    width: 37.5rem;
+    height: 28.125rem;
+    margin: 8rem auto;
+
+    flex-flow: column wrap;
+  }
+
+  .perfume__image {
+    width: 18.75rem;
+    height: 28.125rem;
+    background-image: url(./images/image-product-desktop.jpg);
+    border-radius: 0.625rem 0 0 0.625rem;
+  }
+
+  .perfume__title {
+    margin: 0rem 1.5rem 1.5rem 1.5rem;
+    width: 14.75rem;
+    height: 6rem;
+  }
+
+  .perfume__subtitle {
+    margin: 2rem 1.5rem 1.25rem 1.5rem;
+  }
+
+  .perfume__description {
+    margin: 0rem 1.5rem 1.8125rem 1.5rem;
+    width: 14.8125rem;
+    height: 5.75rem;
+  }
+
+  .perfume__prices {
+    margin: 0rem 1.5rem 1.875rem 1.5rem;
+  }
+
+  .perfume__button {
+    margin: 0rem 1.5rem 0 1.5rem;
+    width: 14.75rem;
+    height: 3rem;
+  }
+
+  .attribution {
+    margin-top: -5rem;
+  }
+}
